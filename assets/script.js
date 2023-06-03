@@ -15,8 +15,8 @@ function getCoordinate(locationString) {
     })
     .then(function(data) {
       console.log(data)
-      var getLatitude = data.lat
-      var getLongitude = data.lon
+      var getLatitude = data[0].lat
+      var getLongitude = data[0].lon
 
       console.log(getLatitude,getLongitude)
 }
