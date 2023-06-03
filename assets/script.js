@@ -7,3 +7,5 @@ function fetchWeather(type) {
       console.log(data)
       });
   }
+
+  
