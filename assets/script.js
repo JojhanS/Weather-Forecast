@@ -5,7 +5,7 @@ document.getElementById('cityButton').addEventListener('click', function(event){
   event.preventDefault()
   locationString = document.getElementById('city').value;
   getCoordinate(locationString)
-});
+  });
 
 function getCoordinate(locationString) {
   fetch(`http:api.openweathermap.org/geo/1.0/direct?q=${locationString}&appid=5526d28663647ecbc08db11b4becf0e1`)
@@ -19,17 +19,18 @@ function getCoordinate(locationString) {
       var getLongitude = data[0].lon
 
       console.log(getLatitude,getLongitude)
-}
+      fetchWeather(getLatitude,getLongitude)
+},
+      function fetchWeather(getLatitude, getLongitude) {
+        fetch(`http:api.openweathermap.org/data/2.5/forecast?lat=${getLatitude}lon=${getLongitude}&appid=5526d28663647ecbc08db11b4becf0e1`)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+          console.log(data)
+          });
+      }
+      )};
 
-)};
 
-function fetchWeather(type) {
-    fetch("https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=5526d28663647ecbc08db11b4becf0e1")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-      console.log(data)
-      });
-  }
 
