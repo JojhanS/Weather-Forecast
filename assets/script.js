@@ -1,11 +1,15 @@
 console.log('hello')
+// event listener for button
 document.getElementById('cityButton').addEventListener('click', function(event){
   event.preventDefault()
+  // gets form input value
   locationString = document.getElementById('city').value;
+  // runs getcoordinate to fetch location
   getCoordinate(locationString)
   console.log(locationString)
 });
 
+// runs geolocation api to turn location string into coordinates
 function getCoordinate(locationString) {
   fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${locationString}&appid=5526d28663647ecbc08db11b4becf0e1`)
     .then(function (response) {
@@ -21,6 +25,7 @@ function getCoordinate(locationString) {
     });
 }
 
+// runs openweathermap api to turn coordinates into weather data
 function fetchWeather(latitude, longitude) {
   fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=standard&cnt=5&appid=5526d28663647ecbc08db11b4becf0e1`)
     .then(function (response) {
