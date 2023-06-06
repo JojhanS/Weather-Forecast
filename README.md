@@ -2,23 +2,13 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Weather Forecast site that displays the weather for a city you type in. Displays the current and forecasted weather for that city.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Type in city of weather you want to view and see as the current and future weathe is displayed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+https://jojhans.github.io/Weather-Forecast/
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+ ![Weather Forecast](./assets/images/Screenshot%202023-06-06%20154459.png)
 
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
